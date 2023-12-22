@@ -50,12 +50,12 @@ export default function Signup() {
                         onChange={(e) => setPassword(e.target.value)}
                     />
                     <button type="submit" className="signup__button">
-                        Signup
+                        Sign Up
                     </button>
                 </form>
 
                 <p className="signup__text">
-                    Need to Login? <Link to="/login">Login</Link>
+                    Already have an account? <Link to="/login" className="signup__login__link">Login</Link>
                 </p>
             </div>
             <img

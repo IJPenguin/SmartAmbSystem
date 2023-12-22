@@ -3,10 +3,7 @@
     src: url(../../assets/fonts/Tiempos-Font/TiemposHeadline-Regular.otf);
 }
 
-@font-face {
-    font-family: "Sofia_Pro";
-    src: url(../../assets/fonts/sofiapro/sofiapro-light.otf);
-}
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
 
 body {
     height: 100vh;
@@ -18,36 +15,94 @@ body {
 
 .signup__card {
     background-color: #fff;
-    width: 90rem;
+    width: 100rem;
     border-radius: 10px;
     display: flex;
     flex-direction: row;
     overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-.signup__flex__container,
-.signup__form {
+.signup__flex__container {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
+.signup__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
 .signup__heading {
     font-family: "Tiempos_Regular", sans-serif;
-    font-size: 3rem;
-    width: max-content;
+    font-size: 3.5rem;
+
+    margin-bottom: 2rem;
+    letter-spacing: -1.2px;
 }
 
 .signup__form__email,
 .signup__form__password {
-    font-family: "Sofia_Pro", sans-serif;
+    font-family: "Manrope", sans-serif;
     display: block;
-    height: 3rem;
+    height: 4rem;
+    font-size: 1.8rem;
+    width: 25rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding-top: 1.2rem;
+}
+
+.signup__form__password {
+    margin-bottom: 3rem;
+}
+
+.signup__form__email:focus,
+.signup__form__password:focus {
+    outline: none;
 }
 
 .signup__img {
     width: 50%;
     height: auto;
-    justify-self: flex-end;
+    flex-shrink: 0;
+}
+
+.signup__text {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.signup__button {
+    font-family: "Manrope", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
+    font-size: 1.8rem;
+    background-color: #003049;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.signup__button:hover {
+    background-color: #003049;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+}
+
+.signup__login__link,
+.signup__login__link:visited,
+.signup__login__link:active {
+    /* text-decoration: none; */
+    color: #000;
 }

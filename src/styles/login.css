@@ -1,0 +1,108 @@
+@font-face {
+    font-family: "Tiempos_Regular";
+    src: url(../../assets/fonts/Tiempos-Font/TiemposHeadline-Regular.otf);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
+
+body {
+    height: 100vh;
+    background-color: #a9c7da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login__card {
+    background-color: #fff;
+    width: 100rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.login__flex__container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.login__heading {
+    font-family: "Tiempos_Regular", sans-serif;
+    font-size: 3.5rem;
+
+    margin-bottom: 2rem;
+    letter-spacing: -1.2px;
+}
+
+.login__form__email,
+.login__form__password {
+    font-family: "Manrope", sans-serif;
+    display: block;
+    height: 4rem;
+    font-size: 1.8rem;
+    width: 25rem;
+    margin-bottom: 1.5rem;
+    border: none;
+    border-bottom: 1px solid #000;
+    padding-top: 1.2rem;
+}
+
+.login__form__password {
+    margin-bottom: 3rem;
+}
+
+.login__form__email:focus,
+.login__form__password:focus {
+    outline: none;
+}
+
+.login__img {
+    width: 50%;
+    height: auto;
+    flex-shrink: 0;
+}
+
+.login__text {
+    font-family: "Manrope", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.login__button {
+    font-family: "Manrope", sans-serif;
+    /* font-family: "Poppins", sans-serif; */
+    font-size: 1.8rem;
+    background-color: #003049;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 0.5rem 2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.login__button:hover {
+    background-color: #003049;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 6px rgba(0, 0, 0, 0.2);
+}
+
+.login__signup__link,
+.login__signup__link:visited,
+.login__signup__link:active {
+    /* text-decoration: none; */
+    color: #000;
+}
