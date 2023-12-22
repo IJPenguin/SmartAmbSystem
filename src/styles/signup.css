@@ -1,0 +1,53 @@
+@font-face {
+    font-family: "Tiempos_Regular";
+    src: url(../../assets/fonts/Tiempos-Font/TiemposHeadline-Regular.otf);
+}
+
+@font-face {
+    font-family: "Sofia_Pro";
+    src: url(../../assets/fonts/sofiapro/sofiapro-light.otf);
+}
+
+body {
+    height: 100vh;
+    background-color: #a9c7da;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.signup__card {
+    background-color: #fff;
+    width: 90rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+
+.signup__flex__container,
+.signup__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup__heading {
+    font-family: "Tiempos_Regular", sans-serif;
+    font-size: 3rem;
+    width: max-content;
+}
+
+.signup__form__email,
+.signup__form__password {
+    font-family: "Sofia_Pro", sans-serif;
+    display: block;
+    height: 3rem;
+}
+
+.signup__img {
+    width: 50%;
+    height: auto;
+    justify-self: flex-end;
+}
