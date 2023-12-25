@@ -1,0 +1,66 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
+@font-face {
+    font-family: "Tiempos_Regular";
+    src: url(../../assets/fonts/Tiempos-Font/TiemposHeadline-Regular.otf);
+}
+
+@font-face {
+    font-family: "Tiempos_Bold";
+    src: url(../../assets/fonts/Tiempos-Font/TiemposHeadline-Medium.otf);
+}
+
+.nav__container {
+    background-color: #d1f3ff;
+    padding: 0 15%;
+}
+
+nav {
+    font-family: "Manrope", sans-serif;
+    font-weight: 400;
+    font-size: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home__nav__branding {
+    display: flex;
+    align-items: center;
+}
+
+.home__nav__logo {
+    width: 100px;
+    height: auto;
+}
+
+.home__nav__home__link {
+    font-family: "Manrope";
+    font-weight: 500;
+    font-size: 4rem;
+    color: #003049;
+    text-decoration: none;
+    letter-spacing: -1.5px;
+}
+
+.home__nav__list {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.home__nav__list__item {
+    margin: 0 10px;
+    cursor: pointer;
+    letter-spacing: -0.1px;
+}
+
+.home__nav__list__link,
+.home__nav__list__link:visited,
+.home__nav__list__link:active {
+    text-decoration: none;
+    color: #003049;
+}
+
+.home__nav__list__link:hover {
+    color: #2eb287;
+}

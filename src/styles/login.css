@@ -1,13 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
+
 @font-face {
     font-family: "Tiempos_Regular";
     src: url(../../assets/fonts/Tiempos-Font/TiemposHeadline-Regular.otf);
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200&display=swap");
-
-body {
+.login__main__container {
     height: 100vh;
-    background-color: #a9c7da;
+    background-color: #D1F3FF;
     display: flex;
     align-items: center;
     justify-content: center;

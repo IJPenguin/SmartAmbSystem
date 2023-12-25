@@ -1,7 +1,8 @@
 import { signOut } from "firebase/auth";
 import { auth } from "../firebase";
 import { useNavigate } from "react-router-dom";
-
+import Navbar from "./Navbar";
+import Hero from "./Hero";
 
 export default function Home() {
     const navigate = useNavigate();
@@ -11,12 +12,12 @@ export default function Home() {
         localStorage.removeItem("token");
         localStorage.removeItem("user");
         navigate("/login");
-    }
+    };
 
     return (
         <div>
-            <h1>The place you call home 🏠</h1>
-            <button onClick={handleLogout}>Logout</button>
+            <Navbar />
+            {/* <Hero /> */}
         </div>
     );
 }

@@ -1,5 +1,3 @@
-
-
 @font-face {
     font-family: "Tiempos_Regular";
     src: url(../../assets/fonts/Tiempos-Font/TiemposHeadline-Regular.otf);
@@ -13,15 +11,5 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    background-color: #669bbc;
-    font-family: "Sofia_Pro", sans-serif;
-    font-size: 1rem;
-}
-
-.signup__img {
-    width: 40rem;
-    height: auto;
+    text-rendering: optimizeLegibility;
 }

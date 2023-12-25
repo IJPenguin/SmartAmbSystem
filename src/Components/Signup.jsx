@@ -1,4 +1,4 @@
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useState } from "react";
 import { auth } from "../firebase";
 import { Link, useNavigate } from "react-router-dom";
@@ -6,6 +6,7 @@ import "../styles/signup.css";
 
 export default function Signup() {
     const [email, setEmail] = useState("");
+    const [name, setName] = useState("");
     const [password, setPassword] = useState("");
 
     const navigate = useNavigate();
@@ -19,8 +20,10 @@ export default function Signup() {
                 email,
                 password
             );
-            console.log(userCredential);
             const user = userCredential.user;
+            const displayName = name;
+            await updateProfile(user, { displayName });
+            localStorage.setItem("name", user.displayName);
             localStorage.setItem("token", user.accessToken);
             localStorage.setItem("user", JSON.stringify(user));
             navigate("/");
@@ -29,39 +32,52 @@ export default function Signup() {
         }
     };
     return (
-        <div className="signup__card">
-            <div className="signup__flex__container">
-                <h1 className="signup__heading">Create Your Account!</h1>
-                <form onSubmit={handleSubmit} className="signup__form">
-                    <input
-                        className="signup__form__email"
-                        type="email"
-                        placeholder="Your Email"
-                        required
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                    />
-                    <input
-                        className="signup__form__password"
-                        type="password"
-                        placeholder="Your Password"
-                        required
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                    />
-                    <button type="submit" className="signup__button">
-                        Sign Up
-                    </button>
-                </form>
+        <div className="signup__main__container">
+            <div className="signup__card">
+                <div className="signup__flex__container">
+                    <h1 className="signup__heading">Create Your Account!</h1>
+                    <form onSubmit={handleSubmit} className="signup__form">
+                        <input
+                            className="signup__form__email"
+                            type="text"
+                            placeholder="Your Name"
+                            required
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                        />
+                        <input
+                            className="signup__form__email"
+                            type="email"
+                            placeholder="Your Email"
+                            required
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                        />
+                        <input
+                            className="signup__form__password"
+                            type="password"
+                            placeholder="Your Password"
+                            required
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)}
+                        />
+                        <button type="submit" className="signup__button">
+                            Sign Up
+                        </button>
+                    </form>
 
-                <p className="signup__text">
-                    Already have an account? <Link to="/login" className="signup__login__link">Login</Link>
-                </p>
+                    <p className="signup__text">
+                        Already have an account?{" "}
+                        <Link to="/login" className="signup__login__link">
+                            Login
+                        </Link>
+                    </p>
+                </div>
+                <img
+                    src="../../assets/images/signup_img.png"
+                    className="signup__img"
+                />
             </div>
-            <img
-                src="../../assets/images/signup_img.png"
-                className="signup__img"
-            />
         </div>
     );
 }
