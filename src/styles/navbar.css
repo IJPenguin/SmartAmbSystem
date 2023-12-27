@@ -64,3 +64,33 @@ nav {
 .home__nav__list__link:hover {
     color: #2eb287;
 }
+
+.dropdown {
+    position: absolute;
+    top: 6.7rem;
+    right: 19.2rem;
+    margin: 0 auto;
+    width: fit-content;
+    transform: translateX(-45%);
+    background-color: #d1f3ff;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 1rem;
+    overflow: hidden;
+    transition: height var(--speed) ease;
+}
+
+.dropdown__list {
+    list-style: none;
+}
+
+.dropdown__list__item {
+    padding: 1rem;
+    cursor: pointer;
+    letter-spacing: -0.1px;
+    border-bottom: 1px solid #003049; /* Add this line */
+}
+
+.dropdown__list__item:last-child {
+    border-bottom: none;
+}

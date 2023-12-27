@@ -1,6 +1,29 @@
+import { useState } from "react";
 import "../styles/navbar.css";
 
+function Dropdown() {
+    const handleLogout = () => {
+        localStorage.removeItem("name");
+        localStorage.removeItem("token");
+        localStorage.removeItem("user");
+        window.location.reload();
+    };
+
+    return (
+        <div className="dropdown">
+            <ul className="dropdown__list">
+                <li className="dropdown__list__item">Dashboard</li>
+                <li className="dropdown__list__item">
+                    <a onClick={handleLogout}>Logout</a>
+                </li>
+            </ul>
+        </div>
+    );
+}
+
 export default function Navbar() {
+    const [open, setOpen] = useState(false);
+
     const userLoggedIn = (
         <div className="nav__container">
             <nav className="home__nav">
@@ -37,9 +60,13 @@ export default function Navbar() {
                         </a>
                     </li>
                     <li className="home__nav__list__item home__nav__list__user">
-                        <a href="" className="home__nav__list__link">
+                        <a
+                            className="home__nav__list__link"
+                            onClick={() => setOpen(!open)}
+                        >
                             {localStorage.getItem("name")}
                         </a>
+                        {open && <Dropdown />}
                     </li>
                 </ul>
             </nav>
