@@ -32,28 +32,36 @@ MedConnect EmergencyCare System is a revolutionary project designed to transform
 
 ### Installation
 1. Clone the repo
-```sh git clone https://github.com/IJPenguin/SmartAmbSystem.git
+```
+sh git clone https://github.com/IJPenguin/SmartAmbSystem.git
 ```
 2. Install NPM packages
-```sh npm install
+```
+sh npm install
 ```
 3. Install Python packages
-```sh pip install -r requirements.txt
+```
+sh pip install -r requirements.txt
 ```
 4. Install MySQL
-```sh sudo apt-get install mysql-server
+```
+sh sudo apt-get install mysql-server
 ```
 5. Install OpenCV
-```sh pip install opencv-python
+```
+sh pip install opencv-python
 ```
 6. Install TensorFlow
-```sh pip install tensorflow
+```
+sh pip install tensorflow
 ```
 7. Install Keras
-```sh pip install keras
+```
+sh pip install keras
 ```
 8. Install Twilio
-```sh pip install twilio
+```
+sh pip install twilio
 ```
 
 ## Usage
