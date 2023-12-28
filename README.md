@@ -16,7 +16,7 @@ MedConnect EmergencyCare System is a revolutionary project designed to transform
 * Machine Learning and Predictive Analytics
 * Real-time Communication Protocols
 
-##Getting Started
+## Getting Started
 
 ### Prerequisites
 * [Node.js](https://nodejs.org/en/)
