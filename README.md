@@ -1,7 +1,7 @@
-# LifeLink EmergencyCare System
+# Lifesync EmergencyCare System
 
 ## Overview
-MedConnect EmergencyCare System is a revolutionary project designed to transform emergency healthcare services. This innovative system seamlessly integrates intelligent ambulances with a centralized patient database, employing cutting-edge technologies to enhance emergency response times, care quality, and resource allocation.
+Lifesync EmergencyCare System is a revolutionary project designed to transform emergency healthcare services. This innovative system seamlessly integrates intelligent ambulances with a centralized patient database, employing cutting-edge technologies to enhance emergency response times, care quality, and resource allocation.
 
 ## Key Features
 - **Smart Ambulances:** Equipped with GPS navigation, high-definition cameras, and real-time connectivity for swift and precise responses.
